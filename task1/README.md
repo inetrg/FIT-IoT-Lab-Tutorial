@@ -1,6 +1,6 @@
 # Task 1
 
-## Task 1.x Create a Power Monitoring Profile
+## Task 1.1 Create a Power Monitoring Profile
 
 The testbed provides you with a power measurement tool. In more detail, each node of an experiment is managed by its control node which, among others, monitors the node consumption. For later use you need to create a *profile* first which sets the configuration. In the web portal click on *Testbed->Manage Profiles->New* and create a profile for Node architecture M3. Don't forget the `<name>` that you give!
 
@@ -10,7 +10,7 @@ For detailed information check the [FIT IoT-Lab Tutorials website](https://www.i
 
 
 
-## Task 1.x Submit an Experiment via Web Portal
+## Task 1.2 Submit an Experiment via Web Portal
 
 Click on *New Experiment*. Give your Experiment a speaking name and set the duration at 30 minutes.
 
@@ -31,7 +31,7 @@ Green nodes indicate active status. By clicking on one node, you select it. Get 
 For detailed information check the [FIT IoT-Lab Tutorials website](https://www.iot-lab.info/tutorials/submit-an-experiment-with-web-portal-and-m3-nodes/)
 
 
-## Task 1.x Explore the CLI tools
+## Task 1.3 Explore the CLI tools
 
 The testbed provides you with a set of command line tools ([CLI tools](https://github.com/iot-lab/iot-lab/wiki/CLI-Tools)) which enables you to interact with the platform and to script experiments. Tools are available on front-end hosts and as a package that can be installed. Open a terminal window, connect via SSH (as described above) and test them by getting your experiment details:
 
@@ -50,7 +50,7 @@ and explore the RIOT shell. By prefixing shell commands with `m3-<NODE ID>;` you
 
 
 
-## Task 1.x RIOT Read/Write Sensors/Actuators
+## Task 1.4 RIOT Read/Write Sensors/Actuators
 
 RIOT's [SAUL](https://riot-os.org/api/group__drivers__saul.html) API ([S]ensor [A]ctuator [U]ber [L]ayer) simplifies and generalizes device access. Explore the M3 hardware ressources. 
 
@@ -60,7 +60,7 @@ RIOT's [SAUL](https://riot-os.org/api/group__drivers__saul.html) API ([S]ensor [
 
 `saul write <device id> <value 0>` gives you access to the three I/Os where the on-board LEDs are connected to. The LEDs are enabled by default. (i). Disable all three of them and 2. play around a bit by turning some on and off. We will see the consumption in our power profile later. **Please note** the LEDs are driven bei Vcc, so you need to **set** the I/O to **disable** the LED.
 
-## Task 1.x RIOT Communicate with Neighbors
+## Task 1.5 RIOT Communicate with Neighbors
 
 The submitted example contains link layer communication capabilities over the build-in 802.15.4 radio which implements RIOT's generic network device abstracion API [netdev](https://riot-os.org/api/structnetdev__driver.html). 
 
@@ -69,7 +69,7 @@ The submitted example contains link layer communication capabilities over the bu
 `txtsnd <if> [<L2 addr>|bcast] <data>` lets you send plain text over the network interface. Use this command to send messages between different nodes.
 
 
-## Get the Power Measurement
+## Task 1.6 Get the Power Measurement
 
 To look at the power consumption graph, connect to the SSH fronted with X11Forwarding
 
@@ -82,10 +82,3 @@ The raw data is stored in a file located on the front-end host at `~/.iot-lab/<E
 Note that it might take a while until the graph is displayed. Once ready, you should see LED toggeling as previously done.
 
 For detailed information check the [FIT IoT-Lab Tutorials website](https://www.iot-lab.info/tutorials/monitor-consumption-m3-node/)
-
-
-
-
-
-
-
