@@ -33,7 +33,13 @@ For detailed information check the [FIT IoT-Lab Tutorials website](https://www.i
 
 ## Task 1.3 Explore the CLI tools
 
-The testbed provides you with a set of command line tools ([CLI tools](https://github.com/iot-lab/iot-lab/wiki/CLI-Tools)) which enables you to interact with the platform and to script experiments. Tools are available on front-end hosts and as a package that can be installed. Open a terminal window, connect via SSH (as described above) and test them by getting your experiment details:
+Connect to the SSH frontend of Lille and authenticate with the IoTLab infrastructure (if not done previously).
+```sh
+ssh <login>@lille.iot-lab.info
+<login>@lille:~$ auth-cli -u <login>
+```
+
+The testbed provides you with a set of command line tools ([CLI tools](https://github.com/iot-lab/iot-lab/wiki/CLI-Tools)) which enables you to interact with the platform and to script experiments. Tools are available on front-end hosts and as a package that can be installed. In the SSH session, test them by getting your experiment details:
 
 `experiment-cli get -i <EXP ID> -r`
 
