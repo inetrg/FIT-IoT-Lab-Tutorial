@@ -14,7 +14,7 @@ You will get a `login` and `password` for the IoTLab testbed by the supervisor. 
 
 In the upper right of the window click on *Testbed->Edit my profile*. In the left box select *SSH Key 2*, paste your key and click on *Modify SSH keys. That's it!
 
-![SSH key](../figures/enter_pubkey.png)
+![SSH key](figures/enter_pubkey.png)
 
 
 ## Tasks
