@@ -93,6 +93,19 @@ use the `ping` command on another m3 node (B) that is multiple hops apart.
 m3-B;ping6 <IPv6 address of A>
 ```
 
+Once the multi-hop communication is verified with ping, you can send arbitrary
+UDP packets with the `udp` command. For this, a UDP server must be started
+on the receiver side using a specific port with the following command:
+```
+m3-A;udp server start <port>
+```
+
+The sender can then transmit UDP packets with an arbitrary string as payload
+to that specific port using:
+```
+m3-B;udp send <global ipv6 address> <port> <payload>
+```
+
 
 ## Get the Sniffer Output
 
